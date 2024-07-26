@@ -32,7 +32,7 @@ CHECKPOINT_NAMES = {
 
 CHOICES = ["A", "B", "C", "D"]
 
-DATA_CONFIG = "dataset_info.json"
+DATA_CONFIG = "/home/cyh/jcy/LLaMA-Factory/data/dataset_info.json"
 
 DEFAULT_TEMPLATE = defaultdict(str)
 
@@ -260,7 +260,8 @@ register_model_group(
             DownloadSource.MODELSCOPE: "ZhipuAI/chatglm3-6b-base",
         },
         "ChatGLM3-6B-Chat": {
-            DownloadSource.DEFAULT: "THUDM/chatglm3-6b",
+            #修改了默认的glm6b模型为微调的第三版模型
+            DownloadSource.DEFAULT: "/home/cyh/jcy/LLaMA-Factory/fine-tune/3",
             DownloadSource.MODELSCOPE: "ZhipuAI/chatglm3-6b",
         },
     },
